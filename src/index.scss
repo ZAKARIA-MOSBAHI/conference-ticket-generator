@@ -1,0 +1,11 @@
+@use "./assets/styles/breakpoints" as * ; 
+@font-face {
+  font-family: Inconsolata;
+  src: url("./assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf");
+}
+* , *::after , *::before {
+    font-family: Inconsolata;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

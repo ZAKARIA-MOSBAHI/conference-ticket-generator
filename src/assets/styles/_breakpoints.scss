@@ -1,0 +1,45 @@
+@use "sass:map";
+// Step 1: Define Breakpoints
+$breakpoints: (
+    xs: 375px,
+    // Extra small devices (small phones)
+    sm: 680px,
+    // Small devices (tablets)
+    md: 1024px,
+    // Medium devices (desktops, laptops)
+    lg: 1200px // Large devices (larger desktops)
+);
+
+// Step 2: Create a Mixin for Media Queries
+@mixin respond-to($size) {
+    $breakpoint: map.get($breakpoints, $size);
+
+    @media (min-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+// Step 3: Define Shorthand Mixins Explicitly
+@mixin xsToSm {
+    @include respond-to(xs) {
+        @content;
+    }
+}
+
+@mixin smToMd {
+    @include respond-to(sm) {
+        @content;
+    }
+}
+
+@mixin mdToLg {
+    @include respond-to(md) {
+        @content;
+    }
+}
+
+@mixin lgToXl {
+    @include respond-to(lg) {
+        @content;
+    }
+}

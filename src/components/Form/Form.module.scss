@@ -1,0 +1,29 @@
+@use "../../assets/styles/variables" as *;
+.form {
+    max-width: 464px;
+    width: 100%;
+    margin :0 auto ;
+    padding-inline: 22px;
+    z-index: 99;
+    .submitInput {
+        input {
+            width: 100%;
+            font-size: clamp(17px , 3vw , 20px);
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            padding-block: 16px;
+            background: $color-orange-500;
+            color: $color-neutral-900;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+            margin-bottom: 40px;
+            &:hover {
+                background: $color-orange-700;
+            } 
+            &:active {
+                scale: 0.98;
+            }   
+        }
+    }
+}

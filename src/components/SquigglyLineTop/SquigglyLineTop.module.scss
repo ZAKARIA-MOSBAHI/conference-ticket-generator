@@ -1,0 +1,22 @@
+@use "../../assets/styles/breakpoints" as *;
+@use "sass:math";
+
+    .SquigglyLineTop {
+        width: 168px;
+        mask-image: linear-gradient(to left, hsl(248, 70%, 10%), hsla(247, 69%, 10%, 0));
+        --webkit-mask-image: linear-gradient(to left, hsl(248, 70%, 10%), hsla(247, 69%, 10%, 0));
+        position: absolute;
+        top: 8%;
+        right: 0;
+        @include xsToSm {
+            width : math.div(400% , 12) ;
+        }
+        @include smToMd {
+            width : math.div(400% , 12) ;
+        }
+        @include mdToLg {
+            width : math.div(300% , 12) ;
+        }
+    
+    }
+

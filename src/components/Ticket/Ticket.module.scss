@@ -1,0 +1,94 @@
+@use "sass:math";
+@use "../../assets/styles/breakpoints" as *;
+@use "../../assets/styles/variables" as *;
+.ticketContainer {
+    position: relative;
+    width:100%;
+    .ticket {
+        width: 100%;
+    }
+    @media (min-width: 490px) {
+        width : math.div(800% , 12);
+        .logo {
+            height: 24px;
+            top: 24px;
+                left: 24px;
+        }
+    }
+
+    @include smToMd {
+        width:376px ;
+        .logo {
+            height: 22px;
+                top: 22px;
+                left: 22px;
+        }
+    }
+        .ticketContainer_h1 {
+            font-weight: 600;
+                font-size: clamp(18px , 3vw , 20px);
+                    width: fit-content;
+                    color: hsl(245, 15%, 58%);
+                    rotate: 90deg;
+                    position: absolute;
+                    right: 24px;
+                    top: 42%;
+                    transform: translateY(-50%);
+                    opacity: 0.8;
+        }
+}
+.ticketContainer_div1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+        height: 16px;
+            top: 16px;
+            left: 16px;
+    .logo_full {
+        width: fit-content;
+        height: 100%;
+    }
+    .ticketContainer_div1_p {
+        font-size: clamp(11px , 3vw , 14px);
+        margin-left: clamp(24px, 3vw, 34px);
+        color:  $color-neutral-500;
+    }
+    
+}
+.ticketContainer_div2 {
+    position: absolute;
+        display: flex;
+        gap: 8px;
+        bottom: 16px;
+        left: 16px;
+        font-size: clamp(11px, 3vw, 18px);
+        color : $color-neutral-0 ;
+    .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        @include mdToLg {
+                width: 52px;
+                height: 52px;
+        }
+    }
+        
+    .ticketContainer_div2_div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @include mdToLg {
+            font-size: 18px ;
+        }
+    .ticketContainer_div2_div_div {
+            color: $color-neutral-500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow: hidden;
+
+        }
+    }
+    
+}

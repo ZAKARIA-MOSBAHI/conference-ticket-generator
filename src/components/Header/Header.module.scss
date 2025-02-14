@@ -1,0 +1,12 @@
+@use "../../assets/styles/breakpoints" as *  ;
+@use "../../assets/styles/variables" as *  ;
+
+.header {
+    width: 100%;
+    padding-block: 32px;
+    display: flex;
+    justify-content: center;
+    img {
+        height: 28px;
+    }
+}

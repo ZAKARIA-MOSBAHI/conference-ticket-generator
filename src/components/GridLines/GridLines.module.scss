@@ -1,0 +1,14 @@
+@use "../../assets/styles/breakpoints" as * ;
+.GridLines {
+    position: absolute; 
+    top: 0;
+    left : 0 ;
+    width: 200%;
+   height: 100%;
+    mask-image: linear-gradient(to bottom , hsl(248, 70%, 10%),
+        hsla(247, 69%, 10%, 0));
+    @include smToMd {
+    width: 100%;
+        padding-inline: 24px;
+    }
+}

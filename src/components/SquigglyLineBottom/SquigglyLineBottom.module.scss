@@ -1,0 +1,36 @@
+@use "../../assets/styles/breakpoints" as * ;
+@use "sass:math" ;
+.SquigglyLineBottomContainer {
+    position: absolute;
+        top: 100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    .SquigglyLineMobile {
+        mask-image: linear-gradient( to right , hsl(248, 70%, 10%) , hsla(247, 69%, 10%, 0));
+        --webkit-mask-image: linear-gradient( to right , hsl(248, 70%, 10%) , hsla(247, 69%, 10%, 0));
+        position: absolute ;
+        bottom: 0;
+        left: 0;
+        width: math.div(1200%, 12);
+
+        @include xsToSm{
+            width: math.div(600%, 12);
+        }
+        @include smToMd{
+            display: none;
+        }
+    }
+    .SquigglyLineDesktop {
+        display: none;
+        @include smToMd {
+                display: block;
+                width: math.div(600%, 12);
+                    mask-image: linear-gradient(to right, hsl(248, 70%, 10%), hsla(247, 69%, 10%, 0));
+                    --webkit-mask-image: linear-gradient(to right, hsl(248, 70%, 10%), hsla(247, 69%, 10%, 0));
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+            }
+    }
+}
